@@ -5,19 +5,28 @@
 package beans;
 
 import com.opensymphony.xwork2.ActionSupport;
-import static com.opensymphony.xwork2.Action.SUCCESS;
+
 /**
  *
  * @author grenn
  */
 public class HolaMundoAction extends ActionSupport{
-    
-    public HolaMundoAction() {
-    }
+    //Logger log = LogManager.getLogger(HolaMundoAction.class);
+    private String saludosAtr;
+
     
     @Override
     public String execute() throws Exception {
-        return SUCCESS;
+        this.saludosAtr = "Hola mundo desde Struts 2";
+        return "exito";
+    }
+
+    public String getSaludosAtr() {
+        return saludosAtr;
+    }
+
+    public void setSaludosAtr(String saludosAtr) {
+        this.saludosAtr = saludosAtr;
     }
     
 }

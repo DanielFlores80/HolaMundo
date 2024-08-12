@@ -6,7 +6,7 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
         <action name="saludar" class="beans.HolaMundoAction">
-            <result>/saludar.jsp</result>
+            <result name="exito">/saludar.jsp</result>
         </action>
     </package>
 </struts>
